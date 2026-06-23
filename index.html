@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        .box{
+            border: 2px solid black;
+            text-align: center;
+            border-radius: 10px;
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Enter Number</h1>
+        <input type="number" id="num" placeholder="Enter Number from user"><br><br>
+        <button onclick="sumOfNumber()">Calculate</button><br><br>
+        <p id="result"></p>
+    </div>
+    <script>
+        function sumOfNumber(){
+            let n=Number(document.getElementById("num").value);
+            let sum=0;
+            for(let i=0;i<=n;i++){
+                sum=sum+i;
+            }
+            document.getElementById("result").innerHTML="Sum:"+sum;
+        }
+    </script>
+</body>
+</html>
